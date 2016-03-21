@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="plutoApp">
+
+<head>
+    <title>Pluto</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <!-- Latest compiled and minified CSS -->
+    <link href='https://fonts.googleapis.com/css?family=Work+Sans:400,200' rel='stylesheet' type='text/css'>
+    <script src="./js/vendor/angular.min.js"></script>
+    <script src="./js/vendor/angular-route.min.js"></script>
+    <!--
+    <script src="./js/vendor/bootstrap.min.js"></script>-->
+    <script src="./js/app.js"></script>
+    <script src="./js/service.js"></script>
+</head>
+
+<body ng-controller="CourseController as courseList">
+    <div id="topbar">
+        <span id="title">p l u t o</span>
+        <span class="titlelogo innercircle"></span>
+        <span class="titlelogo outercircle"></span>
+    </div>
+    <div id="sidebar">
+        <h3>Courses</h3>
+        <ul class="courselist">
+            <li ng-repeat="course in courses" ng-class='{selected:$first}' ng-mouseup='setCurrentCourse({{course.id}})'>{{course.name}}</li>
+            <li class="add" ng-mouseup='addCourse()'>add new course</li>
+        </ul>
+    </div>
+    <div class="content">
+        <table class="assignment-table">
+            <tr class="assignment-section">
+                <th>.</th>
+                <th class="assignment-h" ng-repeat="assignment in assignments">{{assignment.name}}</th>
+            </tr>
+            <tr>
+                <td class="setting-elem">Grade Weight</td>
+                <td class="setting-elem" ng-repeat="assignment in assignments">{{assignment.gradeWeight}}</td>
+            </tr>
+            <tr>
+                <td class="setting-elem">Deadline</td>
+                <td class="setting-elem" ng-repeat="assignment in assignments">{{assignment.deadline}}</td>
+            </tr>
+            <tr>
+                <td class="setting-elem">Students can see their grade?</td>
+                <td class="setting-elem" ng-repeat="assignment in assignments">{{assignment.seeGrade}}</td>
+            </tr>
+            <tr>
+                <td class="setting-elem">Students can see their feedback?</td>
+                <td class="setting-elem" ng-repeat="assignment in assignments">{{assignment.seeFeedback}}</td>
+            </tr>
+            <tr></tr>
+            <div class="student-section" ng-repeat="student in students">
+                <tr>
+                    <td>{{student.name}}</td>
+                    <td>.</td>
+                </tr>
+                <tr>
+                    <td>Subission File</td>
+                    <td ng-repeat="assignment in assignments">{{student.file}}</td>
+                </tr>
+                <tr>
+                    <td>Grade</td>
+                    <td ng-repeat="assignment in assignments">{{student.grade}}</td>
+                </tr>
+                <tr>
+                    <td>Feedback</td>
+                    <td ng-repeat="assignment in assignments">{{student.feedback}}</td>
+                </tr>
+                <tr>
+                    <td>State</td>
+                    <td ng-repeat="assignment in assignments">{{student.state}}</td>
+                </tr>
+            </div>
+        </table>
+
+        <div class="table">
+            <div class="assignment">
+                <div class="assignment-info-section">
+                    <h2 class="assignment-h">.</h2>
+                </div>
+                <div class="assignment-info-section">
+                    <div class="setting-elem">
+                        <span>Grade Weight</span>
+                    </div>
+                    <div class="setting-elem">
+                        <span>Deadline</span>
+                    </div>
+                    <div class="setting-elem">
+                        <span>Students can see their grade?</span>
+                    </div>
+                    <div class="setting-elem">
+                        <span>Students can see their feedback?</span>
+                    </div>
+                </div>
+                <div class="assignment-info-section">
+                    <div class="student">
+                        <div class="student-name">
+                            Anna Doe
+                        </div>
+                        <div class="student-assignment">
+                            File
+                        </div>
+                        <div class="student-assignment">
+                            Grade
+                        </div>
+                        <div class="student-assignment">
+                            Feedback
+                        </div>
+                        <div class="student-assignment">
+                            Has received the feedback?
+                        </div>
+                    </div>
+                    <div class="student-name">
+                        <span>Max Anderson</span>
+                    </div>
+                    <div class="student-name">
+                        <span>Phoebe Cleaveland</span>
+                    </div>
+                </div>
+                <div class="assignment-section">
+                </div>
+            </div>
+            <div class="assignment" ng-repeat="assignment in courseList.assignments">
+                <div class="assignment-section">
+                    <h2 class="assignment-h">{{assignment.name}}</h2>
+                </div>
+                <div class="assignment-section">
+                    <div class="setting-elem">
+                        <input type="text" name="weight" ng-model="assignment.weight" min="0" max="100" required>
+                    </div>
+                    <div class="setting-elem">
+                        <span>{{assignment.deadline | date}}</span>
+                    </div>
+                    <div class="setting-elem">
+                        <span>yes</span>
+                    </div>
+                    <div class="setting-elem">
+                        <span>yes</span>
+                    </div>
+                </div>
+                <div class="assignment-section">
+                </div>
+                <div class="assignment-section">
+                </div>
+            </div>
+            <div class="assignment">
+                <div class="assignment-section">
+                    <h2 class="assignment-h">Report</h2>
+                </div>
+                <div class="assignment-section">
+                    <div class="setting-elem">
+                        <span>20%</span>
+                    </div>
+                    <div class="setting-elem">
+                        <span>15/02/2016</span>
+                    </div>
+                    <div class="setting-elem">
+                        <span>yes</span>
+                    </div>
+                    <div class="setting-elem">
+                        <span>yes</span>
+                    </div>
+                </div>
+                <div class="assignment-section">
+                </div>
+                <div class="assignment-section">
+                </div>
+            </div>
+        </div>
+    </div>
+    </

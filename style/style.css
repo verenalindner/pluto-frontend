@@ -1,0 +1,186 @@
+body{
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 200;
+    overflow: hidden;
+    zoom: 100%;
+    background: #EAEAEA;
+}
+
+body, h1, h2, h3, h4 {
+	margin: 0;
+	padding: 0;
+}
+
+#topbar{
+	background: #fff; /* Old browsers #80CBC4*/
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 50px;
+}
+
+#title{
+	position: absolute;
+	left: 50%;
+    top: 50%;
+    margin-left: -51px;
+    margin-top: -10px;
+}
+
+.titlelogo{
+	position: absolute;
+	left: 50%;
+    top: 50%;
+
+	border-radius: 50%;
+	border: 1px solid rgba(0, 0, 0, 0.17);
+}
+
+.innercircle{
+	width: 20px;
+	height: 20px; 
+
+	margin-left: -10px;
+    margin-top: -10px;
+    background: 1px solid rgba(0, 0, 0, 0.13);
+}
+
+.outercircle{
+	width: 40px;
+	height: 40px; 
+
+	margin-left: -20px;
+    margin-top: -20px;
+}
+
+.content{
+	position: absolute;
+	top: 50px; /*same as bar*/
+	bottom: 0;
+	left: 170px; /*see sidebar */
+	right: 10%;
+	padding: 10px;
+}
+
+
+
+.assignment-table{
+	font-size: 90%;
+	border: 1px solid black;
+	background: none;
+	border-collapse: collapse;
+}
+
+.student-section td tr{
+	background: white;
+}
+
+.assignment-table th{
+	text-transform: uppercase;
+	letter-spacing: .1rem;
+	font-size: 100%;
+}
+
+/*.table {
+	display: table;
+}
+
+.assignment{
+	margin: 20px 3px 0 0; 
+	float: left;
+	min-width: 150px;
+}
+
+.assignment-infos{
+	background: 
+}
+
+.assignment-h{
+	text-transform: uppercase;
+	letter-spacing: .1rem;
+	font-size: 100%;
+}
+
+.assignment-section, .assignment-info-section {
+	background: white;
+	padding: 10px;
+	margin: 3px 0;
+}
+
+.assignment-info-section{
+	background: #EAEAEA;
+	text-align: right;
+}
+.assignment-sec-h{
+	font-size: 100%;
+	font-weight: 400;
+	margin-bottom: 10px;
+}
+
+
+
+.student{
+	margin-bottom: 10px;
+}
+
+.setting-elem, .student-name{
+	margin: 6px 2px;
+	font-size: 90%;
+}
+
+.student-assignment {
+	font-size: 80%;
+	margin: 3px 10px;
+}
+
+.student-table{
+	font-size: 90%;
+}*/
+
+#sidebar{
+	background: #252525; /* Old browsers */
+	
+	position: absolute;
+	top: 50px;
+	left: 0;
+	bottom: 0;
+	width: 160px;
+
+	color: white;
+}
+
+#sidebar h3{
+	text-transform: uppercase;
+	letter-spacing: .3rem;
+	font-size: 100%;
+
+	margin: 30px 10px;
+}
+
+.courselist{
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	font-size: 90%;
+}
+
+.courselist li{
+	padding: 10px 10px;
+	max-width: 150px; /* see sidebar size*/
+}
+
+.selected{
+	background: #EAEAEA;
+	color: black;
+}
+
+.add{
+	font-size: 70%;
+	font-style: italic;
+	margin: 30px auto;
+	display: block;
+	text-align: center;
+}
+
