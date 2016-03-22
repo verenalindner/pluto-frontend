@@ -13,14 +13,30 @@ body, h1, h2, h3, h4 {
 
 #topbar{
 	background: #fff; /* Old browsers #80CBC4*/
-
+	-webkit-app-region: drag;
+	-webkit-user-select: none; /* Chrome/Safari */
+	user-select: none;
 	position: absolute;
 	top: 0;
 	left: 0;
 	right: 0;
 	height: 50px;
+	cursor:default;
 }
-
+.closebutton{
+	position: absolute;
+	right:10px;
+	top:15px;
+	border-radius: 50%;
+	color:#fff;
+	background: #252525;
+	font-size:12px;
+	font-weight:500;
+	padding-left:4px;
+	padding-right:4px;
+	cursor:pointer;
+	-webkit-app-region: no-drag;
+}
 #title{
 	position: absolute;
 	left: 50%;

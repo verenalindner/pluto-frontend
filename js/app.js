@@ -1,3 +1,15 @@
+//NW.JS GUI Objects
+var nw = require('nw.gui');
+var win = nw.Window.get();
+
+//Close button Implementation
+function onInit(){
+    document.getElementById('closebutton').onclick = function(){
+        win.close();
+    };
+}
+
+
 //used to set state and add behavior to a page
 
 var plutoApp = angular.module('plutoApp', []);

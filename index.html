@@ -17,11 +17,12 @@
     <script src="./js/service.js"></script>
 </head>
 
-<body ng-controller="CourseController as courseList">
+<body onload="onInit();" ng-controller="CourseController as courseList">
     <div id="topbar">
         <span id="title">p l u t o</span>
         <span class="titlelogo innercircle"></span>
         <span class="titlelogo outercircle"></span>
+        <span class="closebutton" id="closebutton">X</span>
     </div>
     <div id="sidebar">
         <h3>Courses</h3>
@@ -172,4 +173,4 @@
             </div>
         </div>
     </div>
-    </
+</body>
