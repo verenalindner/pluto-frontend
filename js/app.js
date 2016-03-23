@@ -1,15 +1,3 @@
-//NW.JS GUI Objects
-var nw = require('nw.gui');
-var win = nw.Window.get();
-
-//Close button Implementation
-function onInit(){
-    document.getElementById('closebutton').onclick = function(){
-        win.close();
-    };
-}
-
-
 //used to set state and add behavior to a page
 
 var plutoApp = angular.module('plutoApp', []);
@@ -20,8 +8,7 @@ plutoApp.controller('CourseController', function($scope, courseService) {
     $scope.currentCourse;
 
     $scope.courses = [];
-    $scope.assignments = [{"name": "Paper Summary", "gradeWeight":0.2, "deadline":"01/04/16", "seeGrade": true, "seeFeedback": false
-}];
+    $scope.assignments = [{"name": "Paper Summary", "gradeWeight":0.2, "deadline":"01/04/16", "seeGrade": true, "seeFeedback": false}];
     $scope.students = [];
 
 
@@ -87,6 +74,7 @@ plutoApp.filter('percentage', ['$filter', function($filter) {
         return $filter('number')(input * 100, decimals) + '%';
     };
 }]);
+
 
 // angular.module('assignmentApp', []).controller('TableController', function() {
 
