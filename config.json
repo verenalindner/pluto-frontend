@@ -1,0 +1,6 @@
+{
+  "TeacherID": "1",
+  "FirstName": "Michel",
+  "LastName":"BL",
+  "CoursesID": ["1","2","3"]
+}

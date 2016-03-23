@@ -1,0 +1,15 @@
+{
+  "name": "Pluto",
+  "description": "Pluto: A little more time for teaching",
+  "version": "0.0.0",
+  "main": "index.html",
+  "window": {
+    "icon": "assets/logo.png",
+    "toolbar": false,
+    "frame": false
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+  }
+}
